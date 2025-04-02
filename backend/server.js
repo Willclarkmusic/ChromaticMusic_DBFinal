@@ -25,7 +25,7 @@ const os = require("os");
 const e = require("express");
 const hostname = os.hostname();
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   // flip server should automatically match whatever server you're on
   console.log(`From server.js Server running:  http://${hostname}:${PORT}...`);
 });

@@ -15,7 +15,7 @@ const pool = mysql.createPool({
   user: process.env.DB_USER || "admin",
   password: process.env.DB_PASSWORD || "your_default_password",
   database: process.env.DB_DATABASE || "ChromaticMusic",
-  port: process.env.DB_PORT || 3306,
+  port: process.env.DB_PORT || 3000,
 });
 
 // Export it for use in our application
