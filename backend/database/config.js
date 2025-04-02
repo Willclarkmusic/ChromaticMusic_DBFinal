@@ -12,10 +12,11 @@ const pool = mysql.createPool({
   connectionLimit: 10,
   waitForConnections: true,
   host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER || "root",
+  user: process.env.DB_USER || "admin",
   password: process.env.DB_PASSWORD || "your_default_password",
-  database: process.env.DB_DATABASE || "your_default_database",
+  database: process.env.DB_DATABASE || "ChromaticMusic",
+  port: process.env.DB_PORT || 3306,
 });
 
 // Export it for use in our application
-module.exports = { pool } ;
+module.exports = { pool };

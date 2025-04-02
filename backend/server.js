@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 8321;
 
 app.use(cors({ credentials: true, origin: "*" }));
 app.use(express.json());
+app.use(express.static("dist"));
 
 app.use("/api/customers", require("./routes/customerRoute.js"));
 app.use("/api/departments", require("./routes/departmentRoute.js"));
@@ -25,6 +26,6 @@ const e = require("express");
 const hostname = os.hostname();
 
 app.listen(PORT, () => {
-  // flip server should automatically match whatever server you're on 
+  // flip server should automatically match whatever server you're on
   console.log(`From server.js Server running:  http://${hostname}:${PORT}...`);
 });
